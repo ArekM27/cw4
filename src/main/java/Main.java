@@ -16,14 +16,6 @@ class Main {
     Service s = new Service(); 
     
     try {
-     
-      s.addStudent(new Student("Krzysztof", 20));
-      s.addStudent(new Student("Janusz", 40));
-
-      var students = s.getStudents();
-      for(Student current : students) {
-        System.out.println(current.ToString());
-      }
 
       System.out.println("Wybierz opcje z menu programu: ");
       System.out.println("1. Dodaj studenta");
@@ -38,6 +30,12 @@ class Main {
           System.out.println("Podaj wiek studenta: ");
           int age = scanner.nextInt();
           s.addStudent(new Student(name, age));
+          break;
+          case 2:
+          var students = s.getStudents();
+          for (Student current : students) {
+            System.out.println(current.ToString());
+          }
           break;
 
       }
